@@ -1,0 +1,162 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --primaryFontFam: 'Work Sans', sans-serif;
+    --secondaryFontFam: 'Oswald', sans-serif;
+    --fontCol: rgb(211, 211, 211);
+    --backCol: rgb(96, 97, 109);
+    --secondCol: rgb(43, 44, 65);
+    --thirdCol: rgb(73, 74, 88);
+}
+
+html {
+    background-color: var(--backCol);
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--primaryFontFam);
+    background-color: var(--backCol);
+}
+   
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondaryFontFam);
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+
+/* ScrollBar Setting */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--fontCol);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--thirdCol);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondCol);
+}
+
+#menu {
+    height: 100px;
+    width: 100%;
+}
+
+#title {
+    height: 40px;
+    width: 100%;
+    margin: 0 auto;
+    float: left;
+    background-color: var(--secondCol);
+    color: var(--fontCol);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar {
+    height: 60px;
+    width: 100vw;
+    float: left;
+    background-color: var(--secondCol);
+}
+
+#main {
+    width: 90%;
+    margin: 15px auto;
+
+    display: grid;
+    grid-template: 1fr 1fr 1fr/ 1fr 1fr ;
+    gap: 15px;
+}
+
+#playerSearchContainer {
+    flex: 50%;
+    height: 150px;
+    background-color: var(--thirdCol);
+    float: left;
+}
+
+#serverStatusContainer {
+    flex: 50%;
+    height: 150px;
+    background-color: var(--thirdCol);
+    float: left;
+}
+
+#valorantContentContainer {
+    flex: 100%;
+    height: 150px;
+    background-color: var(--thirdCol);
+    float: left;
+}
+
+#leaderboardContainer {
+    flex: 100%;
+    height: 150px;
+    background-color: var(--thirdCol);
+    float: left;
+}
+
+
