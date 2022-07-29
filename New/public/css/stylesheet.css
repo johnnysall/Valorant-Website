@@ -1,0 +1,287 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    min-height: 100vh;
+    background-color: var(--primaryCol);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+:root {
+    --primaryCol: rgb(58, 58, 58);
+    --secondaryCol: rgb(31, 31, 31);
+    --thirdCol: rgb(77, 77, 77);
+    --fontCol: rgb(230, 230, 230);
+    --accentCol: rgb(216, 30, 30);
+    --fontFam: 'Dosis', sans-serif;
+}
+
+.title {
+    font-family: var(--fontFam);
+    color: var(--fontCol);
+    font-size: 25px;
+}
+
+#header {
+    height: 120px;
+    width: 100%;
+    background-color: var(--secondaryCol);
+    color: var(--fontCol);
+    font-family: var(--fontFam);
+}
+
+#headerTitle {
+    width: 100%;
+    height: 60px;
+    font-size: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar {
+    height: 60px;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#navbar div {
+    width: calc((100%/3) - 5%);
+    height: 60px;
+    margin: 0 2.5%;
+    float: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar div:hover {
+    background-color: var(--primaryCol);
+    cursor: pointer;
+}
+
+
+
+
+#main {
+    color: var(--fontCol);
+    font-family: var(--fontFam);
+
+    width: 60%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+#serverStatus {
+    margin: 50px 2.5% 0 0;
+    padding: 10px 25px;
+    width: 57.5%;
+    height: 100px;
+    display: block;
+    float: left;
+    background-color: var(--thirdCol);
+    box-sizing: border-box;
+}
+
+#serverStatusText {
+    height: 100%;
+    width: calc(100% - 80px);
+    float: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#statusCircle {
+    float: left;
+    margin: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.serverUp {
+    background-color: green;
+}
+
+.serverDown {
+    background-color: red;
+}
+
+#leaderboardRegion {
+    margin: 50px 0 0 2.5%;
+    padding: 1% 2.5%;
+    width: 37.5%;
+    height: 100px;
+    display: block;
+    float: left;
+    background-color: var(--thirdCol);
+    box-sizing: border-box;
+}
+
+#leaderboard {
+    margin-top: 50px;
+    width: 100%;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#leaderboardTitle {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 5%;
+    background-color: var(--secondaryCol);
+    border-bottom: solid thin var(--primaryCol);
+}
+
+#leaderboardTitle,
+#leaderboardHeader {
+    height: 60px;
+    position: relative;
+
+}
+
+.leaderboardPlayer,
+#leaderboardHeader {
+    border-bottom: solid thin var(--primaryCol);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    /* grid-template: 1fr/ 1fr 1fr 1fr 1fr; */
+}
+
+#leaderboardHeader {
+    padding: 30px 5% 15px 5%;
+    font-size: 20px;
+    background-color: var(--secondaryCol);
+}
+
+.leaderboardPlayer {
+    padding: 12.5px 5%;
+    height: 35px;
+    font-size: 15px;
+    border-left: solid thin transparent;
+    background-color: var(--thirdCol);
+
+    position: relative;
+    z-index: 0;
+    overflow:hidden;
+}
+
+.leaderboardPlayer:hover {
+    padding: 0 calc(5% - 12.5px);
+    margin: 12.5px;
+    border-left: solid thin var(--accentCol);
+    cursor: pointer;
+    /* padding: 25px 5%; */
+    transition: 100ms ease-in-out; 
+}
+
+.leaderboardPlayer div,
+#leaderboardHeader div {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.rank1,
+.rank2,
+.rank3 {
+    font-size: 18px !important;
+    height: 70px;
+}
+
+/* .rank1 {
+    background-image: linear-gradient(
+        to right,
+        #bea94a 0,
+        #e2c871 22%, 
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #e2c871 78%,
+        #bea94a 100%
+        ) !important;
+}
+
+.rank2 {
+    background-image: linear-gradient(
+        to right,
+        #c6c6c6 0,
+        #cccccc 22%, 
+        #c3c3c3 45%,
+        #d7d7d7 50%,
+        #c3c3c3 55%,
+        #cccccc 78%,
+        #c6c6c6 100%
+        ) !important;
+}
+
+.rank3 {
+    background-image: linear-gradient(
+        to right,
+        #6A3805 0,
+        #834608 22%, 
+        #92561b 45%,
+        #af6e2d 50%,
+        #92561b 55%,
+        #834608 78%,
+        #6A3805 100%
+        ) !important;
+} */
